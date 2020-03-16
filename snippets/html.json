@@ -1,0 +1,10 @@
+{
+	"Angular Grid": {
+		"prefix": "smart-grid",
+		"description": "<smart-grid> with template reference variable",
+		"scope": "html",
+		"body": [
+			"<smart-grid #grid></smart-grid>"
+		]
+	  }
+}

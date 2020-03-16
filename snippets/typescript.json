@@ -1,0 +1,56 @@
+{
+	"Angular Grid Module": {
+		"prefix": "smart-grid-module",
+		"body": [
+		  "import { NgModule } from '@angular/core';",
+		  "import { BrowserModule } from '@angular/platform-browser';",
+		  "import { FormsModule } from '@angular/forms';",
+		  "",
+		  "import { AppComponent } from './app.component';",
+		  "import { GridModule } from 'smart-webcomponents-angular/grid';",
+		  "",
+		  "@NgModule({",
+		  "    declarations: [AppComponent],",
+		  "    imports: [BrowserModule, FormsModule, GridModule],",
+		  "    schemas: [],",
+		  "    providers: [],",
+		  "    bootstrap: [AppComponent]",
+		  "})",
+		  "",
+		  "export class AppModule { }",
+		  ""
+		],
+		"description": "Angular Grid Module"
+  },
+  "Angular Grid Component": {
+	  "prefix": "smart-grid-component",
+	  "description": "Angular Grid Component",
+	  "scope": "typescript",
+	  "body": [
+		"import { Component, OnInit, AfterViewInit } from '@angular/core';",
+		"import { GridComponent } from 'smart-webcomponents-angular/grid';",
+		"",
+		"@Component({",
+		"\tselector: '${1:selector-name}',",
+		"\ttemplate: `$0<smart-grid #grid></smart-grid>`",
+		"})",
+		"",
+		"export class ${2:Name}Component implements OnInit, AfterViewInit {",
+		"\t@ViewChild('grid', {read: GridComponent, static: false}) grid: GridComponent;",
+		"",
+		"\tconstructor() { }",
+		"",
+		"\tngOnInit() { }",
+		"",
+		"\tngAfterViewInit() {",
+		"\t\tthis.grid.sorting.enabled = true;",
+		"\t\tthis.grid.selection.enabled = true;",
+		"\t\tthis.grid.selection.checkBoxes.enabled = true;",
+		"\t\tthis.grid.columns = [{label: 'Id', dataField: 'id'}, {label: 'Name', dataField: 'name'}];",
+		"\t\tthis.grid.dataSource = new Smart.DataAdapter({dataSource: [{id: 1, name: 'Hydrogen'}, {id: 2, name: 'Helium'}, {id: 3, name: 'Lithium'}, {id: 4, name: 'Beryllium'}, {id: 5, name: 'Boron'},{id: 6, name: 'Carbon'}, {id: 7, name: 'Nitrogen'}, {id: 8, name: 'Oxygen'}, {id: 9, name: 'Fluorine'}, {id: 10, name: 'Neon'}, {id: 11, name: 'Sodium'}, {id: 12, name: 'Magnesium'}, {id: 13, name: 'Aluminum'}, {id: 14, name: 'Silicon'}, {id: 15, name: 'Phosphorus'}, {id: 16, name: 'Sulfur'}, {id: 17, name: 'Chlorine'}, {id: 18, name: 'Argon'}, {id: 19, name: 'Potassium'}, {id: 20, name: 'Calcium'}];",  
+		"\t}",
+		"",
+		"}"
+	  ]
+	}
+}
