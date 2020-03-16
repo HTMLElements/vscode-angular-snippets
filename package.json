@@ -1,6 +1,6 @@
 {
-  "name": "Angular9",
-  "publisher": "jqwidgets",
+  "name": "smart-angular-vscode-snippets",
+  "publisher": "SmartUI",
   "displayName": "Angular Snippets for Smart UI Components",
   "description": "Angular version 9 snippets for Smart UI",
   "version": "9.1.2",
@@ -24,7 +24,6 @@
   },
   "scripts": {
     "package": "npx vsce package",
-    "vscode:prepublish": "tsc -p ./",
     "compile": "tsc -watch -p ./",
     "publish": "npx vsce publish",
     "postinstall": "node ./node_modules/vscode/bin/install"
